@@ -1,5 +1,6 @@
 package br.com.dev.thiagomds.forum.controller;
 
+import br.com.dev.thiagomds.forum.controller.dto.TopicoDTO;
 import br.com.dev.thiagomds.forum.model.Curso;
 import br.com.dev.thiagomds.forum.model.Topico;
 import org.springframework.stereotype.Controller;
@@ -18,12 +19,12 @@ public class TopicosController {
      /* Por padrão, o Spring considera que o retorno do método é o nome da página que ele deve carregar,
      * mas ao utilizar a anotação @ResponseBody, indicamos que o retorno do método deve ser serializado
      * e devolvido no corpo da resposta.*/
-    public List<Topico> lista(){
+    public List<TopicoDTO> lista(){
         Topico topico = new Topico("Dúvida",
                 "Dúvida com Spring",
                 new Curso("Spring", "Programação"));
 
-        return Arrays.asList(topico, topico, topico);
+        return TopicoDTO.converter( Arrays.asList(topico, topico, topico) );
 
     }
 }
