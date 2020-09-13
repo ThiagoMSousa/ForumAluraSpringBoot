@@ -3,6 +3,8 @@ package br.com.dev.thiagomds.forum.controller.dto;
 import br.com.dev.thiagomds.forum.model.Topico;
 
 import java.time.LocalDateTime;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class TopicoDTO {
 
@@ -32,5 +34,11 @@ public class TopicoDTO {
 
     public LocalDateTime getDataCriacao() {
         return dataCriacao;
+    }
+
+    public static List<TopicoDTO> converter( List<Topico> topicos ){
+        return topicos.stream()
+                .map( TopicoDTO::new )
+                .collect( Collectors.toList() );
     }
 }
