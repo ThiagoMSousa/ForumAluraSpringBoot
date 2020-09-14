@@ -14,7 +14,7 @@ public class Topico {
 	private String titulo;
 	private String mensagem;
 	private LocalDateTime dataCriacao = LocalDateTime.now();
-	@Enumerated( EnumType.ORDINAL )
+	@Enumerated( EnumType.STRING )
 	private StatusTopico status = StatusTopico.NAO_RESPONDIDO;
 	@ManyToOne
 	private Usuario autor;
