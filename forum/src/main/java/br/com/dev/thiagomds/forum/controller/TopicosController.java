@@ -25,11 +25,9 @@ public class TopicosController {
      * mas ao utilizar a anotação @ResponseBody, indicamos que o retorno do método deve ser serializado
      * e devolvido no corpo da resposta.*/
     public List<TopicoDTO> lista(){
-        Topico topico = new Topico("Dúvida",
-                "Dúvida com Spring",
-                new Curso("Spring", "Programação"));
+        List<Topico> topicos = topicoRepository.findAll();
 
-        return TopicoDTO.converter( Arrays.asList(topico, topico, topico) );
+        return TopicoDTO.converter(topicos);
 
     }
 }
