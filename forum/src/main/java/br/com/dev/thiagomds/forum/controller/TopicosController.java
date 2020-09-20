@@ -3,6 +3,8 @@ package br.com.dev.thiagomds.forum.controller;
 import br.com.dev.thiagomds.forum.controller.dto.TopicoDTO;
 import br.com.dev.thiagomds.forum.model.Curso;
 import br.com.dev.thiagomds.forum.model.Topico;
+import br.com.dev.thiagomds.forum.repository.TopicoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +15,9 @@ import java.util.List;
 
 @RestController // A annotation @RestController nada mais é do que uma combinação das annotations @Controller e @ResponseBody.
 public class TopicosController {
+
+    @Autowired
+    private TopicoRepository topicoRepository;
 
     @RequestMapping("/topicos")
     //@ResponseBody // A anotação @ResponseBody informa a um controlador que o objeto retornado é serializado automaticamente em JSON e passado de volta para o objeto HttpResponse.
