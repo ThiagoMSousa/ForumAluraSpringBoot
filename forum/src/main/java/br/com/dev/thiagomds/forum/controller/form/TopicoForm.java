@@ -19,4 +19,10 @@ public class TopicoForm {
     public String getTitulo()    { return titulo; }
     public String getMensagem()  { return mensagem; }
     public String getNomeCurso() { return nomeCurso; }
+
+    // Método para Converter Form para Tópico
+    public Topico converter( CursoRepository cursoRepository ) {
+        Curso curso = cursoRepository.findByNome( nomeCurso );
+        return new Topico( titulo, mensagem, curso );
+    }
 }
