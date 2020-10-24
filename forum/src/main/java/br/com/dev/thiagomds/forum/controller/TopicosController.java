@@ -33,5 +33,4 @@ public class TopicosController {
             return TopicoDTO.converter(topicos);
         }
     }
-
 }
