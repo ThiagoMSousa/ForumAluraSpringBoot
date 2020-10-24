@@ -1,5 +1,7 @@
 package br.com.dev.thiagomds.forum.controller.form;
 
+import br.com.dev.thiagomds.forum.model.Topico;
+
 public class TopicoForm {
 
     private String titulo;

@@ -1,6 +1,7 @@
 package br.com.dev.thiagomds.forum.controller;
 
 import br.com.dev.thiagomds.forum.controller.dto.TopicoDTO;
+import br.com.dev.thiagomds.forum.controller.form.TopicoForm;
 import br.com.dev.thiagomds.forum.model.Curso;
 import br.com.dev.thiagomds.forum.model.Topico;
 import br.com.dev.thiagomds.forum.repository.TopicoRepository;
