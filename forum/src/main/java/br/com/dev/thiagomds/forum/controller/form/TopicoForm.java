@@ -1,6 +1,8 @@
 package br.com.dev.thiagomds.forum.controller.form;
 
+import br.com.dev.thiagomds.forum.model.Curso;
 import br.com.dev.thiagomds.forum.model.Topico;
+import br.com.dev.thiagomds.forum.repository.CursoRepository;
 import br.com.dev.thiagomds.forum.repository.TopicoRepository;
 
 public class TopicoForm {

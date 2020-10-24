@@ -4,6 +4,7 @@ import br.com.dev.thiagomds.forum.controller.dto.TopicoDTO;
 import br.com.dev.thiagomds.forum.controller.form.TopicoForm;
 import br.com.dev.thiagomds.forum.model.Curso;
 import br.com.dev.thiagomds.forum.model.Topico;
+import br.com.dev.thiagomds.forum.repository.CursoRepository;
 import br.com.dev.thiagomds.forum.repository.TopicoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
