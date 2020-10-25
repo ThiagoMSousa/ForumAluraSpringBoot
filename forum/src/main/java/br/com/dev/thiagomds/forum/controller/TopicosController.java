@@ -20,6 +20,9 @@ public class TopicosController {
     @Autowired
     private TopicoRepository topicoRepository;
 
+    @Autowired
+    private CursoRepository cursoRepository;
+
     @GetMapping
     //@RequestMapping("/topicos")
     //@ResponseBody // A anotação @ResponseBody informa a um controlador que o objeto retornado é serializado automaticamente em JSON e passado de volta para o objeto HttpResponse.
@@ -34,5 +37,11 @@ public class TopicosController {
             List<Topico> topicos = topicoRepository.findByCursoNome(nomeCurso);
             return TopicoDTO.converter(topicos);
         }
+    }
+
+    @PostMapping
+    public void cadastrar( @RequestBody TopicoForm form ){
+        Topico topico = form.converter( cursoRepository );
+        topicoRepository.save( topico );
     }
 }
